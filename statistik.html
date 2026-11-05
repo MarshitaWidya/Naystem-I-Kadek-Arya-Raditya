@@ -1,0 +1,680 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Naystem | Statistik</title>
+    <link rel="icon" type="favicon" href="assets/logo.png" />
+
+    <!---------- Icon ---------->
+    <link
+      href="library/boxicons v2.1.4/css/boxicons.min.css"
+      rel="stylesheet"
+    />
+
+    <!-- Style CSS -->
+    <link rel="stylesheet" href="css/style.css" />
+
+    <!-- Animate on scroll -->
+    <link rel="stylesheet" href="library/animate_on_scroll/dist/aos.css" />
+    <script src="library/animate_on_scroll/dist/aos.js"></script>
+  </head>
+  <body>
+    <div class="transition">
+      <div class="cover cover1"></div>
+      <div class="cover cover2"></div>
+      <div class="cover cover3"></div>
+      <div class="cover cover4"></div>
+      <div class="cover cover5"></div>
+      <div class="cover cover6"></div>
+    </div>
+
+    <div class="page-green-overlay"></div>
+
+    <button id="showAI" class="showAI">
+      <i class="bx bxs-bot"></i>
+    </button>
+    <div class="ai-container" id="ai-container">
+      <div class="ai-container-main">
+        <div class="ai-container-top">
+          <h1>Naystem<span> AI</span></h1>
+        </div>
+
+        <div class="ai-container-midle" id="chat"></div>
+
+        <div class="ai-container-bottom">
+          <input
+            type="text"
+            id="userInput"
+            placeholder="Tanyakan sesuatu . . ."
+          />
+          <i class="bx bx-up-arrow-alt" onclick="sendQuestion()"></i>
+        </div>
+      </div>
+    </div>
+
+    <div class="tambah-sampah-modal" id="addSampahModal" style="display: none">
+      <div class="modal-content">
+        <div class="modal-content-title">
+          <h1>Catat <span>Sampahmu</span></h1>
+          <i id="close-modal-add-sampah" class="bx bx-x"></i>
+        </div>
+        <div class="input-add-sampah">
+          <div class="input-add-sampah-flex">
+            <select id="jenis-sampah" class="jenis-sampah-input">
+              <option value="Organik">Organik</option>
+              <option value="Anorganik">Anorganik</option>
+              <option value="B3">B3</option>
+            </select>
+            <input
+              type="number"
+              id="jumlah-sampah"
+              class="jumlah-sampah-input"
+              placeholder="Masukan jumlah sampah (Kg)"
+            />
+          </div>
+          <input
+            type="text"
+            id="deskripsi-sampah"
+            class="des-sampah-input"
+            placeholder="Masukan deskripsi sampah"
+          />
+        </div>
+        <div class="addSampahButton">
+          <button id="addSampah">Simpan</button>
+        </div>
+      </div>
+    </div>
+
+    <div class="modal-warning" id="modal-warning" style="display: none">
+      <div class="modal-warning-content">
+        <div class="modal-warning-content-left">
+          <i class="bx bxs-error-circle"></i>
+          <p>Silakan lengkapi semua field terlebih dahulu.</p>
+        </div>
+
+        <div class="modal-warning-content-right">
+          <i id="close-modal-warning" class="bx bx-x"></i>
+        </div>
+      </div>
+    </div>
+
+    <div class="modal-warning" id="modal-warning-reset" style="display: none">
+      <div class="modal-warning-content">
+        <div class="modal-warning-reset">
+          <div class="modal-warning-reset-top">
+            <div class="modal-warning-content-left">
+              <i class="bx bxs-error-circle"></i>
+              <p>Apakah Anda yakin ingin mereset data?</p>
+            </div>
+          </div>
+
+          <div class="modal-warning-reset-bottom">
+            <button
+              id="confirmReset"
+              class="modal-warning-reset-bottom-button1"
+            >
+              Reset
+            </button>
+            <button id="batalReset" class="modal-warning-reset-bottom-button2">
+              Batal
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="modal-success" id="modal-success" style="display: none">
+      <div class="modal-success-content">
+        <div class="modal-success-content-left">
+          <i class="bx bxs-check-circle"></i>
+          <p>Data sampah berhasil disimpan.</p>
+        </div>
+
+        <div class="modal-success-content-right">
+          <i id="close-modal-success" class="bx bx-x"></i>
+        </div>
+      </div>
+    </div>
+
+    <header>
+      <nav class="navbar">
+        <a href="home.html" class="link"
+          ><img src="assets/logo_lengkap.png" alt=""
+        /></a>
+        <div class="navbar-nav">
+          <a href="home.html" class="link">Beranda</a>
+          <a href="pembelajaran.html" class="link">Pembelajaran</a>
+          <a href="portofolio.html" class="link">Portofolio</a>
+          <a href="#">Statistik</a>
+          <a href="rekreasi.html" class="link">Rekreasi</a>
+          <a href="hubungi.html" class="link">Hubungi</a>
+        </div>
+
+        <div class="navbar-extra">
+          <a id="hamburger-menu"><i class="bx bx-menu"></i></a>
+        </div>
+      </nav>
+    </header>
+    <main>
+      <div class="particle">
+        <div class="statistik">
+          <canvas id="particles"></canvas>
+          <div class="hero-section-statistik">
+            <div class="hero-section-statistik-top">
+              <div class="hero-section-statistik-top-des">
+                <h1
+                  data-aos="fade-right"
+                  data-aos-duration="1000"
+                  data-aos-delay="500"
+                >
+                  <span>Statistik</span> Sampah
+                </h1>
+                <p
+                  data-aos="fade-right"
+                  data-aos-duration="1000"
+                  data-aos-delay="600"
+                >
+                  Pantau data sampah yang kamu input dan lihat ringkasan
+                  statistiknya.
+                </p>
+              </div>
+              <div
+                data-aos="fade-left"
+                data-aos-duration="1000"
+                data-aos-delay="500"
+              >
+                <div class="hero-section-statistik-button">
+                  <p>+</p>
+                  <a href="" id="tambahSampah">Catat Sampah</a>
+                </div>
+              </div>
+            </div>
+
+            <div class="hero-section-statistik-bottom">
+              <div
+                class="card-hero-section-statistik total-statistik-card"
+                style="background-color: rgba(72, 161, 17, 0.8)"
+                data-aos="fade-up"
+                data-aos-duration="1000"
+                data-aos-delay="600"
+              >
+                <div
+                  class="card-hero-section-icon"
+                  style="background-color: white"
+                >
+                  <i class="bx bxl-audible" style="color: #48a111"></i>
+                </div>
+                <div class="card-hero-section-icon-des">
+                  <h1 style="color: #f7f0f0">
+                    <span style="color: #f2b50b" id="total-sampah-hero">0</span>
+                    Kg
+                  </h1>
+                  <p style="color: #f7f0f0">Total Sampahmu</p>
+                </div>
+              </div>
+
+              <div
+                class="card-hero-section-statistik"
+                data-aos="fade-up"
+                data-aos-duration="1000"
+                data-aos-delay="700"
+              >
+                <div
+                  class="card-hero-section-icon"
+                  style="background-color: #0f5132"
+                >
+                  <i class="bx bxs-leaf"></i>
+                </div>
+                <div class="card-hero-section-icon-des">
+                  <h1><span id="total-organik">0</span> Kg</h1>
+                  <p>Sampah Organik</p>
+                </div>
+              </div>
+
+              <div
+                class="card-hero-section-statistik"
+                data-aos="fade-up"
+                data-aos-duration="1000"
+                data-aos-delay="800"
+              >
+                <div
+                  class="card-hero-section-icon"
+                  style="background-color: #7ed957"
+                >
+                  <i class="bx bx-fork"></i>
+                </div>
+                <div class="card-hero-section-icon-des">
+                  <h1><span id="total-anorganik">0</span> Kg</h1>
+                  <p>Sampah Anorganik</p>
+                </div>
+              </div>
+
+              <div
+                class="card-hero-section-statistik"
+                data-aos="fade-up"
+                data-aos-duration="1000"
+                data-aos-delay="900"
+              >
+                <div
+                  class="card-hero-section-icon"
+                  style="background-color: #f2b50b"
+                >
+                  <i class="bx bxs-error"></i>
+                </div>
+                <div class="card-hero-section-icon-des">
+                  <h1><span id="total-b3">0</span> Kg</h1>
+                  <p>Sampah B3</p>
+                </div>
+              </div>
+            </div>
+
+            <img
+              src="assets/wave-hero-secction.svg"
+              alt=""
+              class="wave-hero-section"
+            />
+          </div>
+          <div class="statistik-main">
+            <div
+              class="statistik-main-menu"
+              data-aos="fade-up"
+              data-aos-duration="1000"
+            >
+              <button
+                onclick="changeMenuTo('statistik-sampah', this)"
+                class="statistik-btn-menu-1 active"
+              >
+                Statistik Sampah
+              </button>
+              <button
+                onclick="changeMenuTo('histori-sampah', this)"
+                class="statistik-btn-menu-2"
+              >
+                Histori Sampah
+              </button>
+            </div>
+
+            <div class="statistik-main-container">
+              <div
+                class="statistik-main-container-preview"
+                id="statistik-sampah"
+              >
+                <div class="grafik">
+                  <div
+                    class="grafik-batang"
+                    data-aos="fade-right"
+                    data-aos-duration="1000"
+                    data-aos-delay="200"
+                  >
+                    <h1>Perkembangan <span>Sampah</span></h1>
+                    <div id="customBarChart" class="bar-container"></div>
+                  </div>
+                  <div
+                    class="grafik-donut"
+                    id="grafik-donut"
+                    data-aos="fade-left"
+                    data-aos-duration="1000"
+                    data-aos-delay="200"
+                  >
+                    <h1 style="margin-bottom: 1rem">
+                      Komposisi <span>Sampah</span>
+                    </h1>
+                    <div class="donut-wrapper">
+                      <div class="donut-chart">
+                        <div class="donut-center" id="donutTotal">0</div>
+                      </div>
+
+                      <div class="donut-legend">
+                        <div><span class="dot organik"></span> Organik</div>
+                        <div><span class="dot anorganik"></span> Anorganik</div>
+                        <div><span class="dot b3"></span> B3</div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <div
+                  class="sampah-none"
+                  data-aos="fade-up"
+                  data-aos-duration="1000"
+                >
+                  <h1 id="sampah-none-text">
+                    Luar biasa! Hari ini tidak ada sampah yang tercatat.
+                    Pertahankan kebiasaan baikmu dan terus jaga lingkungan!
+                    <span style="color: black">🌱</span>
+                  </h1>
+                </div>
+
+                <div
+                  class="card-des-grafik first"
+                  data-aos="fade-up"
+                  data-aos-duration="1000"
+                  id="card-info-organik"
+                >
+                  <div class="card-des-grafik-judul">
+                    <h1>Sampah <span>Organik</span></h1>
+                    <div
+                      class="garis"
+                      style="background-color: rgba(72, 161, 17, 0.3)"
+                    ></div>
+                  </div>
+                  <p id="text-organik">Lorem ipsum dolor sit amet.</p>
+
+                  <div
+                    class="card-des-grafik-bottom-container"
+                    id="text-organik-dampak-solusi"
+                  >
+                    <div class="card-des-grafik-bottom">
+                      <div class="card-des-grafik-bottom-judul">
+                        <i class="bx bxs-cloud-lightning"></i>
+                        <h1>Dampak Dari <span>Sampahmu</span></h1>
+                      </div>
+                      <ul id="text-organik-dampak">
+                        <li>
+                          Lorem ipsum dolor, sit amet consectetur adipisicing
+                          elit.
+                        </li>
+                        <li>
+                          Lorem ipsum dolor, sit amet consectetur adipisicing
+                          elit.
+                        </li>
+                        <li>
+                          Lorem ipsum dolor, sit amet consectetur adipisicing
+                          elit.
+                        </li>
+                      </ul>
+                    </div>
+
+                    <div class="card-des-grafik-bottom">
+                      <div class="card-des-grafik-bottom-judul">
+                        <i
+                          class="bx bxs-donate-heart"
+                          style="color: #f2b50b"
+                        ></i>
+                        <h1 style="color: #f2b50b">
+                          Solusi Untuk <span>Sampahmu</span>
+                        </h1>
+                      </div>
+                      <ul id="text-organik-solusi">
+                        <li>
+                          Lorem ipsum dolor, sit amet consectetur adipisicing
+                          elit.
+                        </li>
+                        <li>
+                          Lorem ipsum dolor, sit amet consectetur adipisicing
+                          elit.
+                        </li>
+                        <li>
+                          Lorem ipsum dolor, sit amet consectetur adipisicing
+                          elit.
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                  <div class="button-card-des-grafik">
+                    <a
+                      class="button-card-des-grafik-pembelajaran link"
+                      href="pembelajaran.html"
+                      >Pembelajaran</a
+                    >
+                    <a
+                      class="button-card-des-grafik-solusi link"
+                      href="portofolio.html"
+                      >Solusi Nyata</a
+                    >
+                  </div>
+                </div>
+
+                <div
+                  class="card-des-grafik"
+                  data-aos="fade-up"
+                  data-aos-duration="1000"
+                  id="card-info-anorganik"
+                >
+                  <div class="card-des-grafik-judul">
+                    <div
+                      class="garis"
+                      style="background-color: rgba(72, 161, 17, 0.3)"
+                      ;
+                    ></div>
+                    <h1>Sampah <span>Anorganik</span></h1>
+                  </div>
+                  <p id="text-anorganik">Lorem ipsum dolor sit amet.</p>
+
+                  <div
+                    class="card-des-grafik-bottom-container"
+                    id="text-anorganik-dampak-solusi"
+                  >
+                    <div class="card-des-grafik-bottom">
+                      <div class="card-des-grafik-bottom-judul">
+                        <i class="bx bxs-cloud-lightning"></i>
+                        <h1>Dampak Dari <span>Sampahmu</span></h1>
+                      </div>
+                      <ul id="text-anorganik-dampak">
+                        <li>
+                          Lorem ipsum dolor, sit amet consectetur adipisicing
+                          elit.
+                        </li>
+                        <li>
+                          Lorem ipsum dolor, sit amet consectetur adipisicing
+                          elit.
+                        </li>
+                        <li>
+                          Lorem ipsum dolor, sit amet consectetur adipisicing
+                          elit.
+                        </li>
+                      </ul>
+                    </div>
+
+                    <div class="card-des-grafik-bottom">
+                      <div class="card-des-grafik-bottom-judul">
+                        <i
+                          class="bx bxs-donate-heart"
+                          style="color: #f2b50b"
+                        ></i>
+                        <h1 style="color: #f2b50b">
+                          Solusi Untuk <span>Sampahmu</span>
+                        </h1>
+                      </div>
+                      <ul id="text-anorganik-solusi">
+                        <li>
+                          Lorem ipsum dolor, sit amet consectetur adipisicing
+                          elit.
+                        </li>
+                        <li>
+                          Lorem ipsum dolor, sit amet consectetur adipisicing
+                          elit.
+                        </li>
+                        <li>
+                          Lorem ipsum dolor, sit amet consectetur adipisicing
+                          elit.
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                  <div class="button-card-des-grafik">
+                    <a
+                      class="button-card-des-grafik-pembelajaran link"
+                      href="pembelajaran.html"
+                      >Pembelajaran</a
+                    >
+                    <a
+                      class="button-card-des-grafik-solusi link"
+                      href="portofolio.html"
+                      >Solusi Nyata</a
+                    >
+                  </div>
+                </div>
+
+                <div
+                  class="card-des-grafik"
+                  data-aos="fade-up"
+                  data-aos-duration="1000"
+                  id="card-info-b3"
+                >
+                  <div class="card-des-grafik-judul">
+                    <h1>Sampah <span>B3</span></h1>
+                    <div
+                      class="garis"
+                      style="background-color: rgba(72, 161, 17, 0.3)"
+                      ;
+                    ></div>
+                  </div>
+                  <p id="text-b3">Lorem ipsum dolor sit amet.</p>
+
+                  <div
+                    class="card-des-grafik-bottom-container"
+                    id="text-b3-dampak-solusi"
+                  >
+                    <div class="card-des-grafik-bottom">
+                      <div class="card-des-grafik-bottom-judul">
+                        <i class="bx bxs-cloud-lightning"></i>
+                        <h1>Dampak Dari <span>Sampahmu</span></h1>
+                      </div>
+                      <ul id="text-b3-dampak">
+                        <li>
+                          Lorem ipsum dolor, sit amet consectetur adipisicing
+                          elit.
+                        </li>
+                        <li>
+                          Lorem ipsum dolor, sit amet consectetur adipisicing
+                          elit.
+                        </li>
+                        <li>
+                          Lorem ipsum dolor, sit amet consectetur adipisicing
+                          elit.
+                        </li>
+                      </ul>
+                    </div>
+
+                    <div class="card-des-grafik-bottom">
+                      <div class="card-des-grafik-bottom-judul">
+                        <i
+                          class="bx bxs-donate-heart"
+                          style="color: #f2b50b"
+                        ></i>
+                        <h1 style="color: #f2b50b">
+                          Solusi Untuk <span>Sampahmu</span>
+                        </h1>
+                      </div>
+                      <ul id="text-b3-solusi">
+                        <li>
+                          Lorem ipsum dolor, sit amet consectetur adipisicing
+                          elit.
+                        </li>
+                        <li>
+                          Lorem ipsum dolor, sit amet consectetur adipisicing
+                          elit.
+                        </li>
+                        <li>
+                          Lorem ipsum dolor, sit amet consectetur adipisicing
+                          elit.
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                  <div class="button-card-des-grafik">
+                    <a
+                      class="button-card-des-grafik-pembelajaran link"
+                      href="pembelajaran.html"
+                      >Pembelajaran</a
+                    >
+                    <a
+                      class="button-card-des-grafik-solusi link"
+                      href="portofolio.html"
+                      >Solusi Nyata</a
+                    >
+                  </div>
+                </div>
+              </div>
+
+              <div
+                class="statistik-main-container-preview"
+                id="histori-sampah"
+                style="display: none"
+                data-aos="fade-up"
+                data-aos-duration="1000"
+              >
+                <div class="histori-main">
+                  <div class="tabel-histori">
+                    <table>
+                      <thead>
+                        <tr>
+                          <th>No</th>
+                          <th>Jenis Sampah</th>
+                          <th>Jumlah Sampah</th>
+                          <th>Deskripsi Sampah</th>
+                          <th>Tanggal Dibuang</th>
+                        </tr>
+                      </thead>
+                      <tbody id="isi-tabel"></tbody>
+                    </table>
+                  </div>
+                </div>
+                <div
+                  class="resetDataButton"
+                  data-aos="fade-up"
+                  data-aos-duration="1000"
+                  data-aos-delay="100"
+                >
+                  <button id="resetData">Reset Data</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+    <footer>
+      <img src="assets/wave-hero-secction.svg" alt="" class="wave-footer" />
+      <div class="footer-main">
+        <div class="footer-left">
+          <img src="assets/logo_lengkap.png" alt="" />
+          <p>
+            Langkah kecil hari ini dapat membawa perubahan besar untuk bumi esok
+            hari.
+          </p>
+
+          <div class="footer-sosmed">
+            <a><i class="bx bxl-youtube"></i></a>
+            <a><i class="bx bxl-instagram-alt"></i></a>
+            <a><i class="bx bxl-facebook-square"></i></a>
+          </div>
+        </div>
+        <div class="footer-right">
+          <div class="footer-right-link">
+            <h1>Halaman</h1>
+            <a class="link" href="home.html">Beranda</a>
+            <a class="link" href="visi-misi.html">Visi & Misi</a>
+            <a class="link" href="hubungi.html">Hubungi</a>
+            <a class="link" href="pembelajaran.html">Pembelajaran</a>
+            <a href="#">Statistik</a>
+          </div>
+
+          <div class="footer-right-link">
+            <h1>Pembelajaran</h1>
+            <a class="link" href="pengertian-sampah.html">Pengertian Sampah</a>
+            <a class="link" href="jenis-sampah.html">Jenis Sampah</a>
+            <a class="link" href="konsep-3r.html">Konsep 3R </a>
+            <a class="link" href="pengolahan-sampah-plastik.html"
+              >Pengolahan Sampah Plastik</a
+            >
+            <a class="link" href="sampah-yang-bisa-didaur-ulang.html"
+              >Sampah Daur Ulang</a
+            >
+            <a class="link" href="pencemaran-air.html">Pencemaran Air</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <p>Hak Cipta © 2026. Naystem. Semua hak dilindungi undang-undang.</p>
+      </div>
+    </footer>
+
+    <script src="js/script.js"></script>
+    <script src="js/statistik-menu.js"></script>
+    <script src="js/ai.js"></script>
+  </body>
+</html>

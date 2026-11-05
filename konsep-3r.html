@@ -1,0 +1,792 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Naystem | Materi Pembelajaran</title>
+    <link rel="icon" type="favicon" href="assets/logo.png" />
+
+    <!---------- Icon ---------->
+    <link
+      href="library/boxicons v2.1.4/css/boxicons.min.css"
+      rel="stylesheet"
+    />
+
+    <!-- Style CSS -->
+    <link rel="stylesheet" href="css/style.css" />
+
+    <!-- Animate on scroll -->
+    <link rel="stylesheet" href="library/animate_on_scroll/dist/aos.css" />
+    <script src="library/animate_on_scroll/dist/aos.js"></script>
+  </head>
+  <body>
+    <div class="transition">
+      <div class="cover cover1"></div>
+      <div class="cover cover2"></div>
+      <div class="cover cover3"></div>
+      <div class="cover cover4"></div>
+      <div class="cover cover5"></div>
+      <div class="cover cover6"></div>
+    </div>
+
+    <div class="page-green-overlay"></div>
+
+    <div class="modal-warning" id="modal-warning" style="display: none">
+      <div class="modal-warning-content">
+        <div class="modal-warning-content-left">
+          <i class="bx bxs-error-circle"></i>
+          <p>Silakan lengkapi field terlebih dahulu.</p>
+        </div>
+
+        <div class="modal-warning-content-right">
+          <i id="close-modal-warning" class="bx bx-x"></i>
+        </div>
+      </div>
+    </div>
+
+    <div class="modal-success" id="modal-success" style="display: none">
+      <div class="modal-success-content">
+        <div class="modal-success-content-left">
+          <i class="bx bxs-check-circle"></i>
+          <p>Data berhasil disimpan.</p>
+        </div>
+
+        <div class="modal-success-content-right">
+          <i id="close-modal-success" class="bx bx-x"></i>
+        </div>
+      </div>
+    </div>
+
+    <button id="showAI" class="showAI">
+      <i class="bx bxs-bot"></i>
+    </button>
+    <div class="ai-container" id="ai-container">
+      <div class="ai-container-main">
+        <div class="ai-container-top">
+          <h1>Naystem<span> AI</span></h1>
+        </div>
+
+        <div class="ai-container-midle" id="chat"></div>
+
+        <div class="ai-container-bottom">
+          <input
+            type="text"
+            id="userInput"
+            placeholder="Tanyakan sesuatu . . ."
+          />
+          <i class="bx bx-up-arrow-alt" onclick="sendQuestion()"></i>
+        </div>
+      </div>
+    </div>
+    <div class="modal-quiz" id="modal-quiz" style="display: none">
+      <div class="soal-quiz-div">
+        <div class="quiz">
+          <h2 id="question">
+            Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+          </h2>
+          <div id="answer-buttons">
+            <button class="btn">Answer 1</button>
+            <button class="btn">Answer 2</button>
+            <button class="btn">Answer 3</button>
+            <button class="btn">Answer 4</button>
+          </div>
+          <div class="next-button">
+            <button id="next-btn">Selanjutnya</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <header>
+      <nav class="navbar etc">
+        <a href="home.html" class="link"
+          ><img src="assets/logo_lengkap.png" alt=""
+        /></a>
+        <div class="navbar-nav">
+          <a href="home.html" class="link">Beranda</a>
+          <a href="pembelajaran.html" class="link">Pembelajaran</a>
+          <a href="portofolio.html" class="link">Portofolio</a>
+          <a href="statistik.html" class="link">Statistik</a>
+          <a href="rekreasi.html" class="link">Rekreasi</a>
+          <a href="hubungi.html" class="link">Hubungi</a>
+        </div>
+
+        <div class="navbar-extra">
+          <a id="hamburger-menu"><i class="bx bx-menu"></i></a>
+        </div>
+      </nav>
+    </header>
+    <main>
+      <div class="particle">
+        <canvas id="particles"></canvas>
+        <div class="materi-main">
+          <div
+            class="materi-main-left"
+            data-aos="fade-right"
+            data-aos-duration="1000"
+          >
+            <div id="video-1">
+              <iframe
+                class="video-frame"
+                src="https://www.youtube.com/embed/LQ7BFn-sWDw"
+                allowfullscreen
+              ></iframe>
+              <div class="materi-main-left-des">
+                <h1 id="judulVideo">Reduce (Mengurangi Sampah)</h1>
+                <p id="deskripsiVideo">
+                  Reduce berarti mengurangi jumlah sampah yang dihasilkan sejak
+                  awal. Hal ini dapat dilakukan dengan mengurangi penggunaan
+                  barang sekali pakai seperti plastik atau kemasan berlebih.
+                  Contohnya adalah membawa botol minum sendiri atau menggunakan
+                  tas belanja yang dapat dipakai berulang kali. Dengan
+                  mengurangi konsumsi barang yang tidak perlu, jumlah sampah
+                  yang dihasilkan juga akan berkurang. Konsep ini merupakan
+                  langkah pertama dalam pengelolaan sampah yang efektif.
+                </p>
+              </div>
+              <div class="info-video-bottom-container">
+                <div class="info-video-bottom">
+                  <i class="bx bxs-like like"></i>
+                  <p class="ex">326 rb</p>
+                </div>
+                <div class="info-video-bottom">
+                  <i class="bx bxs-hourglass-top"></i>
+                  <p>1.1 jt x ditonton</p>
+                </div>
+                <div class="info-video-bottom">
+                  <i class="bx bxs-calendar"></i>
+                  <p>26 Agustus 2026</p>
+                </div>
+              </div>
+            </div>
+
+            <div id="video-2">
+              <iframe
+                class="video-frame"
+                src="https://www.youtube.com/embed/NP0nRj5val8"
+                allowfullscreen
+              ></iframe>
+              <div class="materi-main-left-des">
+                <h1 id="judulVideo">Reuse (Menggunakan Kembali)</h1>
+                <p id="deskripsiVideo">
+                  Reuse berarti menggunakan kembali barang yang masih bisa
+                  dipakai agar tidak langsung menjadi sampah. Contohnya adalah
+                  menggunakan kembali botol kaca, kardus, atau wadah plastik
+                  untuk keperluan lain. Dengan cara ini, umur penggunaan suatu
+                  barang dapat menjadi lebih panjang. Kebiasaan reuse juga
+                  membantu mengurangi kebutuhan produksi barang baru.
+                </p>
+              </div>
+              <div class="info-video-bottom-container">
+                <div class="info-video-bottom">
+                  <i class="bx bxs-like like"></i>
+                  <p class="ex">326 rb</p>
+                </div>
+                <div class="info-video-bottom">
+                  <i class="bx bxs-hourglass-top"></i>
+                  <p>1.1 jt x ditonton</p>
+                </div>
+                <div class="info-video-bottom">
+                  <i class="bx bxs-calendar"></i>
+                  <p>26 Agustus 2026</p>
+                </div>
+              </div>
+            </div>
+
+            <div id="video-3">
+              <iframe
+                class="video-frame"
+                src="https://www.youtube.com/embed/ts0DYCU5cM8"
+                allowfullscreen
+              ></iframe>
+              <div class="materi-main-left-des">
+                <h1 id="judulVideo">Recycle (Daur Ulang)</h1>
+                <p id="deskripsiVideo">
+                  Recycle adalah proses mengolah kembali sampah menjadi produk
+                  baru yang dapat digunakan kembali. Contohnya adalah mengolah
+                  kertas bekas menjadi kertas baru atau plastik bekas menjadi
+                  produk lain. Proses daur ulang membantu mengurangi jumlah
+                  sampah yang dibuang ke lingkungan. Selain itu, daur ulang juga
+                  dapat menghemat sumber daya alam yang digunakan untuk membuat
+                  produk baru.
+                </p>
+              </div>
+              <div class="info-video-bottom-container">
+                <div class="info-video-bottom">
+                  <i class="bx bxs-like like"></i>
+                  <p class="ex">326 rb</p>
+                </div>
+                <div class="info-video-bottom">
+                  <i class="bx bxs-hourglass-top"></i>
+                  <p>1.1 jt x ditonton</p>
+                </div>
+                <div class="info-video-bottom">
+                  <i class="bx bxs-calendar"></i>
+                  <p>26 Agustus 2026</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="materi-main-right">
+            <button
+              onclick="changeSubbab('video-1')"
+              data-aos="fade-left"
+              data-aos-duration="1000"
+            >
+              <span>Pelajaran</span> <span class="span-menu-video-1">1</span> :
+              Reduce (Mengurangi Sampah)
+            </button>
+            <button
+              onclick="changeSubbab('video-2')"
+              data-aos="fade-left"
+              data-aos-duration="1000"
+              data-aos-delay="100"
+            >
+              <span>Pelajaran</span> <span class="span-menu-video-1">2</span> :
+              Reuse (Menggunakan Kembali)
+            </button>
+            <button
+              onclick="changeSubbab('video-3')"
+              data-aos="fade-left"
+              data-aos-duration="1000"
+              data-aos-delay="200"
+            >
+              <span>Pelajaran</span> <span class="span-menu-video-1">3</span> :
+              Recycle (Daur Ulang)
+            </button>
+            <div
+              data-aos="fade-left"
+              data-aos-duration="1000"
+              data-aos-delay="300"
+            >
+              <button class="kuis-btn" id="kuis-btn">
+                <p>Jawab Pertanyaan</p>
+              </button>
+            </div>
+          </div>
+        </div>
+        <div class="comment-container">
+          <div class="judul-komen">
+            <h1>Forum <span>Diskusi</span></h1>
+            <div
+              class="garis"
+              style="border: 1.3px solid rgba(72, 161, 17, 0.2) !important"
+            ></div>
+          </div>
+          <div class="add-comment">
+            <div class="add-comment-top">
+              <img src="assets/user.png" alt="" />
+              <div class="input-komentar">
+                <input
+                  type="text"
+                  placeholder="Tambahkan Komentar . . ."
+                  required
+                />
+                <div class="kirim-komen">
+                  <i class="bx bxs-send"></i>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="comment-parent">
+            <div class="comment">
+              <div class="comment-top">
+                <div class="comment-top-left">
+                  <img src="assets/user1.jpg" alt="" />
+                </div>
+                <div class="comment-top-right">
+                  <h1>Dimas Pratama</h1>
+                  <p>2 hari lalu</p>
+                </div>
+              </div>
+              <div class="comment-mid">
+                <p>
+                  Menurut saya, memilah sampah dari rumah merupakan langkah
+                  sederhana yang bisa dilakukan setiap hari untuk membantu
+                  mengurangi jumlah sampah yang berakhir di lingkungan.
+                </p>
+              </div>
+              <div class="comment-bottom">
+                <button class="like-btn">
+                  <i class="bx bxs-like"></i>
+                  <span class="like-count">24</span>
+                </button>
+
+                <button class="reply-btn">
+                  <i class="bx bx-reply-all"></i> Balas
+                </button>
+
+                <button class="balasan-btn">
+                  <i class="bx bx-chevron-down"></i>
+                  Lihat 3 balasan
+                </button>
+              </div>
+
+              <div class="input-komentar-balasan reply-box">
+                <input type="text" placeholder="Tulis Balasan . . ." />
+
+                <button class="send-reply kirim-komen-balasan">
+                  <i class="bx bx-send"></i>
+                </button>
+              </div>
+
+              <div class="balasan-container">
+                <div class="balasan">
+                  <div class="comment-top">
+                    <div class="comment-top-left ant">
+                      <img src="assets/user3.jpg" alt="" />
+                    </div>
+                    <div class="comment-top-right ant">
+                      <h1>Citra Ayuning</h1>
+                      <p>1 hari lalu</p>
+                    </div>
+                  </div>
+                  <div class="comment-mid ant">
+                    <p>
+                      Setuju banget, kebiasaan kecil seperti memisahkan sampah
+                      organik dan anorganik akan terasa lebih mudah kalau
+                      seluruh anggota keluarga ikut melakukannya.
+                    </p>
+                  </div>
+                </div>
+                <div class="balasan">
+                  <div class="comment-top">
+                    <div class="comment-top-left ant">
+                      <img src="assets/user4.jpg" alt="" />
+                    </div>
+                    <div class="comment-top-right ant">
+                      <h1>Bagas Ramadhan</h1>
+                      <p>1 hari lalu</p>
+                    </div>
+                  </div>
+                  <div class="comment-mid ant">
+                    <p>
+                      Saya juga mulai menerapkannya di tempat usaha kecil saya
+                      karena ternyata pemisahan sampah membuat proses
+                      pengelolaan sampah menjadi lebih teratur.
+                    </p>
+                  </div>
+                </div>
+                <div class="balasan">
+                  <div class="comment-top">
+                    <div class="comment-top-left ant">
+                      <img src="assets/user2.jpg" alt="" />
+                    </div>
+                    <div class="comment-top-right ant">
+                      <h1>Nadia Putri</h1>
+                      <p>Pelajar · 20 jam lalu</p>
+                    </div>
+                  </div>
+                  <div class="comment-mid ant">
+                    <p>
+                      Menurut saya, lingkungan sekolah juga bisa menjadi tempat
+                      yang bagus untuk membiasakan kegiatan memilah sampah sejak
+                      usia muda.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="comment">
+              <div class="comment-top">
+                <div class="comment-top-left">
+                  <img src="assets/user3.jpg" alt="" />
+                </div>
+                <div class="comment-top-right">
+                  <h1>Rani Maharani</h1>
+                  <p>5 hari lalu</p>
+                </div>
+              </div>
+              <div class="comment-mid">
+                <p>
+                  Setelah melihat materi ini, saya baru menyadari bahwa sampah
+                  organik seperti sisa makanan ternyata masih dapat dimanfaatkan
+                  kembali menjadi sesuatu yang berguna.
+                </p>
+              </div>
+              <div class="comment-bottom">
+                <button class="like-btn">
+                  <i class="bx bxs-like"></i>
+                  <span class="like-count">18</span>
+                </button>
+
+                <button class="reply-btn">
+                  <i class="bx bx-reply-all"></i> Balas
+                </button>
+
+                <button class="balasan-btn">
+                  <i class="bx bx-chevron-down"></i>
+                  Lihat 2 balasan
+                </button>
+              </div>
+
+              <div class="input-komentar-balasan reply-box">
+                <input type="text" placeholder="Tulis Balasan . . ." />
+
+                <button class="send-reply kirim-komen-balasan">
+                  <i class="bx bx-send"></i>
+                </button>
+              </div>
+
+              <div class="balasan-container">
+                <div class="balasan">
+                  <div class="comment-top">
+                    <div class="comment-top-left ant">
+                      <img src="assets/user1.jpg" alt="" />
+                    </div>
+                    <div class="comment-top-right ant">
+                      <h1>Yoga Saputra</h1>
+                      <p>4 hari lalu</p>
+                    </div>
+                  </div>
+                  <div class="comment-mid ant">
+                    <p>
+                      Benar, sisa makanan dan daun kering dapat dimanfaatkan
+                      untuk membuat kompos yang nantinya berguna bagi tanaman di
+                      sekitar rumah.
+                    </p>
+                  </div>
+                </div>
+                <div class="balasan">
+                  <div class="comment-top">
+                    <div class="comment-top-left ant">
+                      <img src="assets/user4.jpg" alt="" />
+                    </div>
+                    <div class="comment-top-right ant">
+                      <h1>Sinta Lestari</h1>
+                      <p>3 hari lalu</p>
+                    </div>
+                  </div>
+                  <div class="comment-mid ant">
+                    <p>
+                      Saya tertarik mencoba membuat kompos sendiri karena
+                      ternyata caranya tidak sesulit yang saya bayangkan setelah
+                      melihat penjelasan pada video tersebut.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="comment">
+              <div class="comment-top">
+                <div class="comment-top-left">
+                  <img src="assets/user2.jpg" alt="" />
+                </div>
+                <div class="comment-top-right">
+                  <h1>Reza Aditya</h1>
+                  <p>1 minggu lalu</p>
+                </div>
+              </div>
+              <div class="comment-mid">
+                <p>
+                  Menurut saya, masalah sampah bukan hanya disebabkan oleh
+                  banyaknya sampah yang dihasilkan, tetapi juga kebiasaan
+                  masyarakat dalam membuang dan mengelolanya.
+                </p>
+              </div>
+              <div class="comment-bottom">
+                <button class="like-btn">
+                  <i class="bx bxs-like"></i>
+                  <span class="like-count">31</span>
+                </button>
+
+                <button class="reply-btn">
+                  <i class="bx bx-reply-all"></i> Balas
+                </button>
+
+                <button class="balasan-btn">
+                  <i class="bx bx-chevron-down"></i>
+                  Lihat 0 balasan
+                </button>
+              </div>
+
+              <div class="input-komentar-balasan reply-box">
+                <input type="text" placeholder="Tulis Balasan . . ." />
+
+                <button class="send-reply kirim-komen-balasan">
+                  <i class="bx bx-send"></i>
+                </button>
+              </div>
+
+              <div class="balasan-container"></div>
+            </div>
+            <div class="comment">
+              <div class="comment-top">
+                <div class="comment-top-left">
+                  <img src="assets/user4.jpg" alt="" />
+                </div>
+                <div class="comment-top-right">
+                  <h1>Maya Kartika</h1>
+                  <p>1 minggu lalu</p>
+                </div>
+              </div>
+              <div class="comment-mid">
+                <p>
+                  Saya masih sering bingung membedakan sampah yang termasuk B3
+                  dengan sampah biasa, terutama ketika menemukan barang bekas
+                  yang belum pernah saya gunakan sebelumnya.
+                </p>
+              </div>
+              <div class="comment-bottom">
+                <button class="like-btn">
+                  <i class="bx bxs-like"></i>
+                  <span class="like-count">15</span>
+                </button>
+
+                <button class="reply-btn">
+                  <i class="bx bx-reply-all"></i> Balas
+                </button>
+
+                <button class="balasan-btn">
+                  <i class="bx bx-chevron-down"></i>
+                  Lihat 4 balasan
+                </button>
+              </div>
+
+              <div class="input-komentar-balasan reply-box">
+                <input type="text" placeholder="Tulis Balasan . . ." />
+
+                <button class="send-reply kirim-komen-balasan">
+                  <i class="bx bx-send"></i>
+                </button>
+              </div>
+
+              <div class="balasan-container">
+                <div class="balasan">
+                  <div class="comment-top">
+                    <div class="comment-top-left ant">
+                      <img src="assets/user2.jpg" alt="" />
+                    </div>
+                    <div class="comment-top-right ant">
+                      <h1>Ardi Wijaya</h1>
+                      <p>6 hari lalu</p>
+                    </div>
+                  </div>
+                  <div class="comment-mid ant">
+                    <p>
+                      Sampah B3 biasanya perlu diperhatikan karena mengandung
+                      bahan yang dapat membahayakan manusia maupun lingkungan
+                      jika tidak dikelola dengan benar.
+                    </p>
+                  </div>
+                </div>
+                <div class="balasan">
+                  <div class="comment-top">
+                    <div class="comment-top-left ant">
+                      <img src="assets/user1.jpg" alt="" />
+                    </div>
+                    <div class="comment-top-right ant">
+                      <h1>Lala Permata</h1>
+                      <p>6 hari Lalu</p>
+                    </div>
+                  </div>
+                  <div class="comment-mid ant">
+                    <p>
+                      Saya juga awalnya bingung, terutama dengan baterai bekas
+                      dan beberapa jenis lampu yang ternyata tidak boleh dibuang
+                      sembarangan.
+                    </p>
+                  </div>
+                </div>
+                <div class="balasan">
+                  <div class="comment-top">
+                    <div class="comment-top-left ant">
+                      <img src="assets/user3.jpg" alt="" />
+                    </div>
+                    <div class="comment-top-right ant">
+                      <h1>Fajar Nugraha</h1>
+                      <p>5 hari Lalu</p>
+                    </div>
+                  </div>
+                  <div class="comment-mid ant">
+                    <p>
+                      Setelah mengetahui contohnya, saya jadi lebih mudah
+                      mengenali beberapa benda yang sebaiknya dipisahkan dari
+                      sampah rumah tangga lainnya.
+                    </p>
+                  </div>
+                </div>
+
+                <div class="balasan">
+                  <div class="comment-top">
+                    <div class="comment-top-left ant">
+                      <img src="assets/user1.jpg" alt="" />
+                    </div>
+                    <div class="comment-top-right ant">
+                      <h1>Maya Kartika</h1>
+                      <p>5 hari Lalu</p>
+                    </div>
+                  </div>
+                  <div class="comment-mid ant">
+                    <p>
+                      Terima kasih penjelasannya, sekarang saya jadi lebih paham
+                      bahwa sampah B3 membutuhkan penanganan yang berbeda
+                      dibandingkan sampah biasa.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="comment">
+              <div class="comment-top">
+                <div class="comment-top-left">
+                  <img src="assets/user1.jpg" alt="" />
+                </div>
+                <div class="comment-top-right">
+                  <h1>Kevin Mahendra</h1>
+                  <p>2 minggu lalu</p>
+                </div>
+              </div>
+              <div class="comment-mid">
+                <p>
+                  Menurut saya, menggunakan kembali barang yang masih layak
+                  merupakan kebiasaan sederhana yang dapat mengurangi keinginan
+                  untuk terus membeli barang baru.
+                </p>
+              </div>
+              <div class="comment-bottom">
+                <button class="like-btn">
+                  <i class="bx bxs-like"></i>
+                  <span class="like-count">13</span>
+                </button>
+
+                <button class="reply-btn">
+                  <i class="bx bx-reply-all"></i> Balas
+                </button>
+
+                <button class="balasan-btn">
+                  <i class="bx bx-chevron-down"></i>
+                  Lihat 1 balasan
+                </button>
+              </div>
+
+              <div class="input-komentar-balasan reply-box">
+                <input type="text" placeholder="Tulis Balasan . . ." />
+
+                <button class="send-reply kirim-komen-balasan">
+                  <i class="bx bx-send"></i>
+                </button>
+              </div>
+
+              <div class="balasan-container">
+                <div class="balasan">
+                  <div class="comment-top">
+                    <div class="comment-top-left ant">
+                      <img src="assets/user4.jpg" alt="" />
+                    </div>
+                    <div class="comment-top-right ant">
+                      <h1>Putu Sari</h1>
+                      <p>1 minggu lalu</p>
+                    </div>
+                  </div>
+                  <div class="comment-mid ant">
+                    <p>
+                      Saya setuju, beberapa wadah bekas di rumah ternyata masih
+                      bisa digunakan untuk menyimpan barang sehingga tidak
+                      langsung menjadi sampah.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="comment">
+              <div class="comment-top">
+                <div class="comment-top-left">
+                  <img src="assets/user3.jpg" alt="" />
+                </div>
+                <div class="comment-top-right">
+                  <h1>Andika Surya</h1>
+                  <p>3 minggu lalu</p>
+                </div>
+              </div>
+              <div class="comment-mid">
+                <p>
+                  Menurut saya, edukasi tentang pengelolaan sampah sebaiknya
+                  lebih sering dilakukan di sekolah agar siswa terbiasa menjaga
+                  lingkungan melalui kebiasaan kecil sehari-hari.
+                </p>
+              </div>
+              <div class="comment-bottom">
+                <button class="like-btn">
+                  <i class="bx bxs-like"></i>
+                  <span class="like-count">21</span>
+                </button>
+
+                <button class="reply-btn">
+                  <i class="bx bx-reply-all"></i> Balas
+                </button>
+
+                <button class="balasan-btn">
+                  <i class="bx bx-chevron-down"></i>
+                  Lihat 0 balasan
+                </button>
+              </div>
+
+              <div class="input-komentar-balasan reply-box">
+                <input type="text" placeholder="Tulis Balasan . . ." />
+
+                <button class="send-reply kirim-komen-balasan">
+                  <i class="bx bx-send"></i>
+                </button>
+              </div>
+
+              <div class="balasan-container"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+    <footer>
+      <img src="assets/wave-hero-secction.svg" alt="" class="wave-footer" />
+      <div class="footer-main">
+        <div class="footer-left">
+          <img src="assets/logo_lengkap.png" alt="" />
+          <p>
+            Langkah kecil hari ini dapat membawa perubahan besar untuk bumi esok
+            hari.
+          </p>
+
+          <div class="footer-sosmed">
+            <a><i class="bx bxl-youtube"></i></a>
+            <a><i class="bx bxl-instagram-alt"></i></a>
+            <a><i class="bx bxl-facebook-square"></i></a>
+          </div>
+        </div>
+        <div class="footer-right">
+          <div class="footer-right-link">
+            <h1>Halaman</h1>
+            <a class="link" href="home.html">Beranda</a>
+            <a class="link" href="visi-misi.html">Visi & Misi</a>
+            <a class="link" href="hubungi.html">Hubungi</a>
+            <a class="link" href="pembelajaran.html">Pembelajaran</a>
+            <a class="link" href="statistik.html">Statistik</a>
+          </div>
+
+          <div class="footer-right-link">
+            <h1>Pembelajaran</h1>
+            <a class="link" href="pengertian-sampah.html">Pengertian Sampah</a>
+            <a class="link" href="jenis-sampah.html">Jenis Sampah</a>
+            <a href="#">Konsep 3R </a>
+            <a class="link" href="pengolahan-sampah-plastik.html"
+              >Pengolahan Sampah Plastik</a
+            >
+            <a class="link" href="sampah-yang-bisa-didaur-ulang.html"
+              >Sampah Daur Ulang</a
+            >
+            <a class="link" href="pencemaran-air.html">Pencemaran Air</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <p>Hak Cipta © 2026. Naystem. Semua hak dilindungi undang-undang.</p>
+      </div>
+    </footer>
+    <script src="js/video-pembelajaran.js"></script>
+
+    <script src="js/script.js"></script>
+    <script src="js/ai.js"></script>
+    <script src="js/quiz.js"></script>
+  </body>
+</html>

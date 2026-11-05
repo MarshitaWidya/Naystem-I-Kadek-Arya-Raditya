@@ -1,0 +1,892 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Naystem | Materi Pembelajaran</title>
+    <link rel="icon" type="favicon" href="assets/logo.png" />
+
+    <!---------- Icon ---------->
+    <link
+      href="library/boxicons v2.1.4/css/boxicons.min.css"
+      rel="stylesheet"
+    />
+
+    <!-- Style CSS -->
+    <link rel="stylesheet" href="css/style.css" />
+
+    <!-- Animate on scroll -->
+    <link rel="stylesheet" href="library/animate_on_scroll/dist/aos.css" />
+    <script src="library/animate_on_scroll/dist/aos.js"></script>
+  </head>
+  <body>
+    <div class="transition">
+      <div class="cover cover1"></div>
+      <div class="cover cover2"></div>
+      <div class="cover cover3"></div>
+      <div class="cover cover4"></div>
+      <div class="cover cover5"></div>
+      <div class="cover cover6"></div>
+    </div>
+
+    <div class="page-green-overlay"></div>
+
+    <button id="showAI" class="showAI">
+      <i class="bx bxs-bot"></i>
+    </button>
+    <div class="ai-container" id="ai-container">
+      <div class="ai-container-main">
+        <div class="ai-container-top">
+          <h1>Naystem<span> AI</span></h1>
+        </div>
+
+        <div class="ai-container-midle" id="chat"></div>
+
+        <div class="ai-container-bottom">
+          <input
+            type="text"
+            id="userInput"
+            placeholder="Tanyakan sesuatu . . ."
+          />
+          <i class="bx bx-up-arrow-alt" onclick="sendQuestion()"></i>
+        </div>
+      </div>
+    </div>
+
+    <header>
+      <nav class="navbar">
+        <a href="home.html" class="link"
+          ><img src="assets/logo_lengkap.png" alt=""
+        /></a>
+        <div class="navbar-nav">
+          <a href="home.html" class="link">Beranda</a>
+          <a href="#">Pembelajaran</a>
+          <a href="portofolio.html" class="link">Portofolio</a>
+          <a href="statistik.html" class="link">Statistik</a>
+          <a href="rekreasi.html" class="link">Rekreasi</a>
+          <a href="hubungi.html" class="link">Hubungi</a>
+        </div>
+
+        <div class="navbar-extra">
+          <a id="hamburger-menu"><i class="bx bx-menu"></i></a>
+        </div>
+      </nav>
+
+      <div class="hero-section-all pembelajaran-hero-section">
+        <h1
+          class="hero-section-pembelajaran-h1"
+          data-aos="fade-up"
+          data-aos-duration="1000"
+          data-aos-delay="500"
+          style="margin-bottom: 1.8rem"
+        >
+          <span>Materi</span> Pembelajaran
+        </h1>
+        <p data-aos="fade-up" data-aos-duration="1000" data-aos-delay="600">
+          Temukan materi pembelajaran yang terstruktur untuk membimbingmu
+          memahami setiap topik secara bertahap.
+        </p>
+
+        <div
+          class="hero-section-button"
+          data-aos="fade-up"
+          data-aos-duration="1000"
+          data-aos-delay="700"
+        >
+          <a
+            href="#materi-pembelajaran"
+            style="padding-right: 6rem; padding-left: 6rem"
+            >Mulai Belajar</a
+          >
+        </div>
+
+        <img
+          src="assets/wave-hero-secction.svg"
+          alt=""
+          class="wave-hero-section"
+        />
+      </div>
+    </header>
+    <main>
+      <div
+        class="materi-pembelajaran-top-container"
+        data-aos="fade-up"
+        data-aos-duration="1000"
+        data-aos-delay="200"
+        data-aos-once="true"
+        id="materi-pembelajaran"
+      >
+        <button class="scroll-btn left"><</button>
+        <div class="materi-pembelajaran-top">
+          <div class="button-flex">
+            <button onclick="changeTo('mengenal-sampah', this)">
+              Mengenal Sampah
+            </button>
+            <button onclick="changeTo('cara-mengelola-sampah', this)">
+              Cara Mengelola Sampah
+            </button>
+            <button onclick="changeTo('pencemaran-lingkungan', this)">
+              Pencemaran Lingkungan
+            </button>
+            <button onclick="changeTo('mengenal-sampah', this)">
+              Memahami Sampah
+            </button>
+            <button onclick="changeTo('cara-mengelola-sampah', this)">
+              Pengendalian sampah
+            </button>
+            <button onclick="changeTo('pencemaran-lingkungan', this)">
+              Kerusakan Lingkungan
+            </button>
+          </div>
+        </div>
+        <button class="scroll-btn right">></button>
+      </div>
+
+      <div class="particle">
+        <canvas id="particles"></canvas>
+
+        <div class="materi-pembelajaran-preview-container">
+          <div class="materi-pembelajaran-preview" id="mengenal-sampah">
+            <div class="urutan-materi-container">
+              <div
+                class="urutan-materi-container-card"
+                data-aos="fade-right"
+                data-aos-duration="1000"
+              >
+                <div class="step-title">
+                  <i class="bx bxl-xing"></i>
+                  <p>Materi 1</p>
+                </div>
+                <h1>Pengertian Sampah</h1>
+                <p>
+                  Pada subbab ini, pengguna akan mempelajari pengertian sampah
+                  sebagai sisa dari aktivitas manusia atau proses alam....
+                </p>
+
+                <div class="urutan-materi-container-card-bottom">
+                  <a class="card-bottom-1 link" href="pengertian-sampah.html"
+                    >Materi Pembelajaran</a
+                  >
+                </div>
+              </div>
+
+              <div
+                class="urutan-materi-container-number"
+                data-aos="fade-up"
+                data-aos-duration="300"
+              >
+                <p>1</p>
+              </div>
+
+              <div
+                class="urutan-materi-container-des"
+                data-aos="fade-left"
+                data-aos-duration="1000"
+              >
+                <h1>Materi 1</h1>
+                <p>
+                  Pada subbab ini, pengguna akan mempelajari dasar pengertian
+                  sampah, sumbernya, serta alasan mengapa sampah dapat menjadi
+                  masalah bagi lingkungan.
+                </p>
+              </div>
+            </div>
+            <div class="urutan-materi-container">
+              <div
+                class="urutan-materi-container-des"
+                data-aos="fade-right"
+                data-aos-duration="1000"
+              >
+                <h1 style="text-align: right">Materi 2</h1>
+                <p>
+                  Pada subbab ini, pengguna akan mempelajari perbedaan antara
+                  sampah organik dan anorganik agar dapat mengenali serta
+                  memilah sampah dengan benar.
+                </p>
+              </div>
+
+              <div
+                class="urutan-materi-container-number"
+                data-aos="fade-up"
+                data-aos-duration="300"
+              >
+                <p>2</p>
+              </div>
+
+              <div
+                class="urutan-materi-container-card"
+                data-aos="fade-left"
+                data-aos-duration="1000"
+              >
+                <div class="step-title">
+                  <i class="bx bxl-xing"></i>
+                  <p>Materi 2</p>
+                </div>
+                <h1>Jenis Sampah</h1>
+                <p>
+                  Pada subbab ini, pengguna akan mempelajari perbedaan sampah
+                  organik dan anorganik....
+                </p>
+
+                <div class="urutan-materi-container-card-bottom">
+                  <a class="card-bottom-1 link" href="jenis-sampah.html"
+                    >Materi Pembelajaran</a
+                  >
+                </div>
+              </div>
+            </div>
+            <div class="urutan-materi-container">
+              <div
+                class="urutan-materi-container-card"
+                data-aos="fade-right"
+                data-aos-duration="1000"
+              >
+                <div class="step-title">
+                  <i class="bx bxl-xing"></i>
+                  <p>Materi 3</p>
+                </div>
+                <h1>Sampah yang Bisa Didaur Ulang</h1>
+                <p>
+                  Pada subbab ini, pengguna akan mempelajari jenis sampah yang
+                  dapat didaur ulang....
+                </p>
+
+                <div class="urutan-materi-container-card-bottom">
+                  <a
+                    class="card-bottom-1 link"
+                    href="sampah-yang-bisa-didaur-ulang.html"
+                    >Materi Pembelajaran</a
+                  >
+                </div>
+              </div>
+
+              <div
+                class="urutan-materi-container-number"
+                data-aos="fade-up"
+                data-aos-duration="300"
+              >
+                <p>3</p>
+              </div>
+
+              <div
+                class="urutan-materi-container-des"
+                data-aos="fade-left"
+                data-aos-duration="1000"
+              >
+                <h1>Materi 3</h1>
+                <p>
+                  Pada subbab ini, pengguna akan mempelajari beberapa jenis
+                  sampah yang masih dapat dimanfaatkan kembali melalui proses
+                  daur ulang.
+                </p>
+              </div>
+            </div>
+            <div class="urutan-materi-container">
+              <div
+                class="urutan-materi-container-des"
+                data-aos="fade-right"
+                data-aos-duration="1000"
+              >
+                <h1 style="text-align: right">Materi 4</h1>
+                <p>
+                  Pada subbab ini, pengguna akan memahami berbagai dampak sampah
+                  terhadap lingkungan, seperti pencemaran dan kerusakan
+                  ekosistem.
+                </p>
+              </div>
+
+              <div
+                class="urutan-materi-container-number"
+                data-aos="fade-up"
+                data-aos-duration="300"
+              >
+                <p>4</p>
+              </div>
+
+              <div
+                class="urutan-materi-container-card"
+                data-aos="fade-left"
+                data-aos-duration="1000"
+              >
+                <div class="step-title">
+                  <i class="bx bxl-xing"></i>
+                  <p>Materi 4</p>
+                </div>
+                <h1>Dampak Sampah terhadap Lingkungan</h1>
+                <p>
+                  Pada subbab ini, pengguna akan mempelajari dampak sampah
+                  terhadap lingkungan....
+                </p>
+
+                <div class="urutan-materi-container-card-bottom">
+                  <a class="card-bottom-1 link" href="dampak-sampah.html"
+                    >Materi Pembelajaran</a
+                  >
+                </div>
+              </div>
+            </div>
+            <div class="urutan-materi-container">
+              <div
+                class="urutan-materi-container-card"
+                data-aos="fade-right"
+                data-aos-duration="1000"
+              >
+                <div class="step-title">
+                  <i class="bx bxl-xing"></i>
+                  <p>Materi 5</p>
+                </div>
+                <h1>Cara Mengurangi Sampah</h1>
+                <p>
+                  Pada subbab ini, pengguna akan mempelajari cara sederhana
+                  untuk mengurangi sampah....
+                </p>
+
+                <div class="urutan-materi-container-card-bottom">
+                  <a
+                    class="card-bottom-1 link"
+                    href="cara-mengurangi-sampah.html"
+                    >Materi Pembelajaran</a
+                  >
+                </div>
+              </div>
+
+              <div
+                class="urutan-materi-container-number"
+                data-aos="fade-up"
+                data-aos-duration="300"
+              >
+                <p>5</p>
+              </div>
+
+              <div
+                class="urutan-materi-container-des"
+                data-aos="fade-left"
+                data-aos-duration="1000"
+              >
+                <h1>Materi 5</h1>
+                <p>
+                  Pada subbab ini, pengguna akan mempelajari langkah-langkah
+                  sederhana untuk mengurangi sampah dalam kehidupan sehari-hari.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <div
+            class="materi-pembelajaran-preview"
+            id="cara-mengelola-sampah"
+            style="display: none"
+          >
+            <div class="urutan-materi-container">
+              <div
+                class="urutan-materi-container-card"
+                data-aos="fade-right"
+                data-aos-duration="1000"
+              >
+                <div class="step-title">
+                  <i class="bx bxl-xing"></i>
+                  <p>Materi 1</p>
+                </div>
+                <h1>Memilah Sampah di Rumah</h1>
+                <p>
+                  Memilah sampah adalah proses memisahkan sampah berdasarkan
+                  jenisnya seperti organik dan anorganik agar lebih mudah diolah
+                  dan tidak menumpuk di lingkungan....
+                </p>
+
+                <div class="urutan-materi-container-card-bottom">
+                  <a
+                    class="card-bottom-1 link"
+                    href="memilah-sampah-di-rumah.html"
+                    >Materi Pembelajaran</a
+                  >
+                </div>
+              </div>
+
+              <div
+                class="urutan-materi-container-number"
+                data-aos="fade-up"
+                data-aos-duration="300"
+              >
+                <p>1</p>
+              </div>
+
+              <div
+                class="urutan-materi-container-des"
+                data-aos="fade-left"
+                data-aos-duration="1000"
+              >
+                <h1>Materi 1</h1>
+                <p>
+                  Pada subbab ini, pengguna akan mempelajari pentingnya memilah
+                  sampah serta cara sederhana melakukannya di rumah.
+                </p>
+              </div>
+            </div>
+            <div class="urutan-materi-container">
+              <div
+                class="urutan-materi-container-des"
+                data-aos="fade-right"
+                data-aos-duration="1000"
+              >
+                <h1 style="text-align: right">Materi 2</h1>
+                <p>
+                  Pada subbab ini, pengguna akan mempelajari prinsip reduce,
+                  reuse, dan recycle dalam pengelolaan sampah.
+                </p>
+              </div>
+
+              <div
+                class="urutan-materi-container-number"
+                data-aos="fade-up"
+                data-aos-duration="300"
+              >
+                <p>2</p>
+              </div>
+
+              <div
+                class="urutan-materi-container-card"
+                data-aos="fade-left"
+                data-aos-duration="1000"
+              >
+                <div class="step-title">
+                  <i class="bx bxl-xing"></i>
+                  <p>Materi 2</p>
+                </div>
+                <h1>Konsep 3R (Reduce, Reuse, Recycle)</h1>
+                <p>
+                  Konsep 3R merupakan cara mengelola sampah dengan mengurangi
+                  penggunaan barang, menggunakan kembali barang yang masih
+                  layak, dan mendaur ulang sampah agar dapat dimanfaatkan
+                  kembali....
+                </p>
+
+                <div class="urutan-materi-container-card-bottom">
+                  <a class="card-bottom-1 link" href="konsep-3r.html"
+                    >Materi Pembelajaran</a
+                  >
+                </div>
+              </div>
+            </div>
+            <div class="urutan-materi-container">
+              <div
+                class="urutan-materi-container-card"
+                data-aos="fade-right"
+                data-aos-duration="1000"
+              >
+                <div class="step-title">
+                  <i class="bx bxl-xing"></i>
+                  <p>Materi 3</p>
+                </div>
+                <h1>Pengolahan Sampah Organik</h1>
+                <p>
+                  Sampah organik seperti sisa makanan dan daun dapat terurai
+                  secara alami dan dapat diolah menjadi kompos yang bermanfaat
+                  bagi tanaman....
+                </p>
+
+                <div class="urutan-materi-container-card-bottom">
+                  <a
+                    class="card-bottom-1 link"
+                    href="pengolahan-sampah-organik.html"
+                    >Materi Pembelajaran</a
+                  >
+                </div>
+              </div>
+
+              <div
+                class="urutan-materi-container-number"
+                data-aos="fade-up"
+                data-aos-duration="300"
+              >
+                <p>3</p>
+              </div>
+
+              <div
+                class="urutan-materi-container-des"
+                data-aos="fade-left"
+                data-aos-duration="1000"
+              >
+                <h1>Materi 3</h1>
+                <p>
+                  Pada subbab ini, pengguna akan mempelajari cara memanfaatkan
+                  dan mengolah sampah organik.
+                </p>
+              </div>
+            </div>
+            <div class="urutan-materi-container">
+              <div
+                class="urutan-materi-container-des"
+                data-aos="fade-right"
+                data-aos-duration="1000"
+              >
+                <h1 style="text-align: right">Materi 4</h1>
+                <p>
+                  Pada subbab ini, pengguna akan mempelajari cara mengurangi dan
+                  memanfaatkan kembali sampah plastik.
+                </p>
+              </div>
+
+              <div
+                class="urutan-materi-container-number"
+                data-aos="fade-up"
+                data-aos-duration="300"
+              >
+                <p>4</p>
+              </div>
+
+              <div
+                class="urutan-materi-container-card"
+                data-aos="fade-left"
+                data-aos-duration="1000"
+              >
+                <div class="step-title">
+                  <i class="bx bxl-xing"></i>
+                  <p>Materi 4</p>
+                </div>
+                <h1>Pengolahan Sampah Plastik</h1>
+                <p>
+                  Sampah plastik merupakan jenis sampah yang sulit terurai
+                  sehingga perlu dikelola dengan baik agar tidak mencemari
+                  lingkungan....
+                </p>
+
+                <div class="urutan-materi-container-card-bottom">
+                  <a
+                    class="card-bottom-1 link"
+                    href="pengolahan-sampah-plastik.html"
+                    >Materi Pembelajaran</a
+                  >
+                </div>
+              </div>
+            </div>
+            <div class="urutan-materi-container">
+              <div
+                class="urutan-materi-container-card"
+                data-aos="fade-right"
+                data-aos-duration="1000"
+              >
+                <div class="step-title">
+                  <i class="bx bxl-xing"></i>
+                  <p>Materi 5</p>
+                </div>
+                <h1>Kebiasaan Mengurangi Sampah</h1>
+                <p>
+                  Mengurangi sampah dapat dimulai dari kebiasaan sehari-hari
+                  seperti menggunakan barang ramah lingkungan dan membeli barang
+                  sesuai kebutuhan....
+                </p>
+
+                <div class="urutan-materi-container-card-bottom">
+                  <a
+                    class="card-bottom-1 link"
+                    href="kebiasaan-mengurangi-sampah.html"
+                    >Materi Pembelajaran</a
+                  >
+                </div>
+              </div>
+
+              <div
+                class="urutan-materi-container-number"
+                data-aos="fade-up"
+                data-aos-duration="300"
+              >
+                <p>5</p>
+              </div>
+
+              <div
+                class="urutan-materi-container-des"
+                data-aos="fade-left"
+                data-aos-duration="1000"
+              >
+                <h1>Materi 5</h1>
+                <p>
+                  Pada subbab ini, pengguna akan mempelajari kebiasaan sederhana
+                  yang dapat membantu mengurangi jumlah sampah.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <div
+            class="materi-pembelajaran-preview"
+            id="pencemaran-lingkungan"
+            style="display: none"
+          >
+            <div class="urutan-materi-container">
+              <div
+                class="urutan-materi-container-card"
+                data-aos="fade-right"
+                data-aos-duration="1000"
+              >
+                <div class="step-title">
+                  <i class="bx bxl-xing"></i>
+                  <p>Materi 1</p>
+                </div>
+                <h1>Pengertian Pencemaran Lingkungan</h1>
+                <p>
+                  Pencemaran lingkungan adalah kondisi ketika lingkungan
+                  tercemar oleh zat berbahaya yang merusak keseimbangan alam....
+                </p>
+
+                <div class="urutan-materi-container-card-bottom">
+                  <a
+                    class="card-bottom-1 link"
+                    href="pengertian-pencemaran-lingkungan.html"
+                    >Materi Pembelajaran</a
+                  >
+                </div>
+              </div>
+
+              <div
+                class="urutan-materi-container-number"
+                data-aos="fade-up"
+                data-aos-duration="300"
+              >
+                <p>1</p>
+              </div>
+
+              <div
+                class="urutan-materi-container-des"
+                data-aos="fade-left"
+                data-aos-duration="1000"
+              >
+                <h1>Materi 1</h1>
+                <p>
+                  Pada subbab ini, pengguna akan mempelajari pengertian
+                  pencemaran lingkungan, penyebab terjadinya pencemaran, serta
+                  hubungan antara sampah dan pencemaran lingkungan.
+                </p>
+              </div>
+            </div>
+            <div class="urutan-materi-container">
+              <div
+                class="urutan-materi-container-des"
+                data-aos="fade-right"
+                data-aos-duration="1000"
+              >
+                <h1 style="text-align: right">Materi 2</h1>
+                <p>
+                  Pada subbab ini, pengguna akan mempelajari pengertian
+                  pencemaran tanah, dampak sampah terhadap tanah, serta cara
+                  mengurangi pencemaran tanah.
+                </p>
+              </div>
+
+              <div
+                class="urutan-materi-container-number"
+                data-aos="fade-up"
+                data-aos-duration="300"
+              >
+                <p>2</p>
+              </div>
+
+              <div
+                class="urutan-materi-container-card"
+                data-aos="fade-left"
+                data-aos-duration="1000"
+              >
+                <div class="step-title">
+                  <i class="bx bxl-xing"></i>
+                  <p>Materi 2</p>
+                </div>
+                <h1>Pencemaran Tanah</h1>
+                <p>
+                  Pencemaran tanah terjadi ketika bahan berbahaya seperti sampah
+                  atau bahan kimia masuk ke dalam tanah dan merusak
+                  kualitasnya....
+                </p>
+
+                <div class="urutan-materi-container-card-bottom">
+                  <a class="card-bottom-1 link" href="pencemaran-tanah.html"
+                    >Materi Pembelajaran</a
+                  >
+                </div>
+              </div>
+            </div>
+            <div class="urutan-materi-container">
+              <div
+                class="urutan-materi-container-card"
+                data-aos="fade-right"
+                data-aos-duration="1000"
+              >
+                <div class="step-title">
+                  <i class="bx bxl-xing"></i>
+                  <p>Materi 3</p>
+                </div>
+                <h1>Pencemaran Air</h1>
+                <p>
+                  Pencemaran air terjadi ketika zat berbahaya atau sampah masuk
+                  ke dalam sumber air sehingga menurunkan kualitas air....
+                </p>
+
+                <div class="urutan-materi-container-card-bottom">
+                  <a class="card-bottom-1 link" href="pencemaran-air.html"
+                    >Materi Pembelajaran</a
+                  >
+                </div>
+              </div>
+
+              <div
+                class="urutan-materi-container-number"
+                data-aos="fade-up"
+                data-aos-duration="300"
+              >
+                <p>3</p>
+              </div>
+
+              <div
+                class="urutan-materi-container-des"
+                data-aos="fade-left"
+                data-aos-duration="1000"
+              >
+                <h1>Materi 3</h1>
+                <p>
+                  Pada subbab ini, pengguna akan mempelajari penyebab pencemaran
+                  air, hubungan sampah dengan pencemaran air, serta dampaknya
+                  bagi lingkungan.
+                </p>
+              </div>
+            </div>
+            <div class="urutan-materi-container">
+              <div
+                class="urutan-materi-container-des"
+                data-aos="fade-right"
+                data-aos-duration="1000"
+              >
+                <h1 style="text-align: right">Materi 4</h1>
+                <p>
+                  Pada subbab ini, pengguna akan mempelajari penyebab pencemaran
+                  udara, hubungan pembakaran sampah dengan polusi udara, serta
+                  dampaknya bagi kesehatan.
+                </p>
+              </div>
+
+              <div
+                class="urutan-materi-container-number"
+                data-aos="fade-up"
+                data-aos-duration="300"
+              >
+                <p>4</p>
+              </div>
+
+              <div
+                class="urutan-materi-container-card"
+                data-aos="fade-left"
+                data-aos-duration="1000"
+              >
+                <div class="step-title">
+                  <i class="bx bxl-xing"></i>
+                  <p>Materi 4</p>
+                </div>
+                <h1>Pencemaran Udara</h1>
+                <p>
+                  Pencemaran udara terjadi ketika udara mengandung zat berbahaya
+                  seperti asap kendaraan, pabrik, atau pembakaran sampah....
+                </p>
+
+                <div class="urutan-materi-container-card-bottom">
+                  <a class="card-bottom-1 link" href="pencemaran-udara.html"
+                    >Materi Pembelajaran</a
+                  >
+                </div>
+              </div>
+            </div>
+            <div class="urutan-materi-container">
+              <div
+                class="urutan-materi-container-card"
+                data-aos="fade-right"
+                data-aos-duration="1000"
+              >
+                <div class="step-title">
+                  <i class="bx bxl-xing"></i>
+                  <p>Materi 5</p>
+                </div>
+                <h1>Dampak Pencemaran bagi Kehidupan</h1>
+                <p>
+                  Pencemaran lingkungan dapat memberikan dampak bagi manusia,
+                  hewan, tumbuhan, serta keseimbangan ekosistem....
+                </p>
+
+                <div class="urutan-materi-container-card-bottom">
+                  <a class="card-bottom-1 link" href="dampak-pencemaran.html"
+                    >Materi Pembelajaran</a
+                  >
+                </div>
+              </div>
+
+              <div
+                class="urutan-materi-container-number"
+                data-aos="fade-up"
+                data-aos-duration="300"
+              >
+                <p>5</p>
+              </div>
+
+              <div
+                class="urutan-materi-container-des"
+                data-aos="fade-left"
+                data-aos-duration="1000"
+              >
+                <h1>Materi 5</h1>
+                <p>
+                  Pada subbab ini, pengguna akan mempelajari berbagai dampak
+                  pencemaran terhadap kehidupan dan lingkungan.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+    <footer>
+      <img src="assets/wave-hero-secction.svg" alt="" class="wave-footer" />
+      <div class="footer-main">
+        <div class="footer-left">
+          <img src="assets/logo_lengkap.png" alt="" />
+          <p>
+            Langkah kecil hari ini dapat membawa perubahan besar untuk bumi esok
+            hari.
+          </p>
+
+          <div class="footer-sosmed">
+            <a><i class="bx bxl-youtube"></i></a>
+            <a><i class="bx bxl-instagram-alt"></i></a>
+            <a><i class="bx bxl-facebook-square"></i></a>
+          </div>
+        </div>
+        <div class="footer-right">
+          <div class="footer-right-link">
+            <h1>Halaman</h1>
+            <a class="link" href="home.html">Beranda</a>
+            <a class="link" href="visi-misi.html">Visi & Misi</a>
+            <a class="link" href="hubungi.html">Hubungi</a>
+            <a href="#">Pembelajaran</a>
+            <a class="link" href="statistik.html">Statistik</a>
+          </div>
+
+          <div class="footer-right-link">
+            <h1>Pembelajaran</h1>
+            <a class="link" href="pengertian-sampah.html">Pengertian Sampah</a>
+            <a class="link" href="jenis-sampah.html">Jenis Sampah</a>
+            <a class="link" href="konsep-3r.html">Konsep 3R </a>
+            <a class="link" href="pengolahan-sampah-plastik.html"
+              >Pengolahan Sampah Plastik</a
+            >
+            <a class="link" href="sampah-yang-bisa-didaur-ulang.html"
+              >Sampah Daur Ulang</a
+            >
+            <a class="link" href="pencemaran-air.html">Pencemaran Air</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <p>Hak Cipta © 2026. Naystem. Semua hak dilindungi undang-undang.</p>
+      </div>
+    </footer>
+    <script src="js/script.js"></script>
+    <script src="js/materi-pembelajaran.js"></script>
+    <script src="js/ai.js"></script>
+  </body>
+</html>

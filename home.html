@@ -1,0 +1,355 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Naystem | Beranda</title>
+    <link rel="icon" type="favicon" href="assets/logo.png" />
+
+    <!---------- Icon ---------->
+    <link
+      href="library/boxicons v2.1.4/css/boxicons.min.css"
+      rel="stylesheet"
+    />
+
+    <!-- Style CSS -->
+    <link rel="stylesheet" href="css/style.css" />
+
+    <!-- Animate on scroll -->
+    <link rel="stylesheet" href="library/animate_on_scroll/dist/aos.css" />
+    <script src="library/animate_on_scroll/dist/aos.js"></script>
+  </head>
+  <body>
+    <div class="transition">
+      <div class="cover cover1"></div>
+      <div class="cover cover2"></div>
+      <div class="cover cover3"></div>
+      <div class="cover cover4"></div>
+      <div class="cover cover5"></div>
+      <div class="cover cover6"></div>
+    </div>
+
+    <div class="page-green-overlay"></div>
+
+    <button id="showAI" class="showAI">
+      <i class="bx bxs-bot"></i>
+    </button>
+    <div class="ai-container" id="ai-container">
+      <div class="ai-container-main">
+        <div class="ai-container-top">
+          <h1>Naystem<span> AI</span></h1>
+        </div>
+
+        <div class="ai-container-midle" id="chat"></div>
+
+        <div class="ai-container-bottom">
+          <input
+            type="text"
+            id="userInput"
+            placeholder="Tanyakan sesuatu . . ."
+          />
+          <i class="bx bx-up-arrow-alt" onclick="sendQuestion()"></i>
+        </div>
+      </div>
+    </div>
+    <header>
+      <nav class="navbar">
+        <a href="#"><img src="assets/logo_lengkap.png" alt="" /></a>
+        <div class="navbar-nav">
+          <a href="#">Beranda</a>
+          <a href="pembelajaran.html" class="link">Pembelajaran</a>
+          <a href="portofolio.html" class="link">Portofolio</a>
+          <a href="statistik.html" class="link">Statistik</a>
+          <a href="rekreasi.html" class="link">Rekreasi</a>
+          <a href="hubungi.html" class="link">Hubungi</a>
+        </div>
+
+        <div class="navbar-extra">
+          <a id="hamburger-menu"><i class="bx bx-menu"></i></a>
+        </div>
+      </nav>
+
+      <div class="hero-section-beranda">
+        <h2 data-aos="fade-right" data-aos-duration="1000" data-aos-delay="500">
+          Platform Pengelolaan Sampah
+        </h2>
+        <h1 data-aos="fade-right" data-aos-duration="1000" data-aos-delay="600">
+          Sadari <span style="color: #f2b50b">Sampahmu</span> Sekarang
+        </h1>
+        <p data-aos="fade-right" data-aos-duration="1000" data-aos-delay="700">
+          Langkah kecil hari ini dapat membawa perubahan besar untuk bumi esok
+          hari.
+        </p>
+        <div
+          class="hero-section-button"
+          data-aos="fade-right"
+          data-aos-duration="1000"
+          data-aos-delay="800"
+        >
+          <a href="statistik.html" class="link">Mulai Catat Sampah</a>
+        </div>
+
+        <img
+          src="assets/wave-hero-secction.svg"
+          alt=""
+          class="wave-hero-section"
+        />
+      </div>
+    </header>
+    <main>
+      <div class="particle">
+        <canvas id="particles"></canvas>
+        <div class="tentang-naystem" id="tentang-naystem">
+          <div class="section-title">
+            <h1 data-aos="fade-up" data-aos-duration="1000">
+              Tentang <span>Naystem</span>
+            </h1>
+            <p data-aos="fade-up" data-aos-duration="1000" data-aos-delay="100">
+              Kenali lebih dekat Naystem dan bagaimana platform ini membantu
+              memantau sampah.
+            </p>
+          </div>
+
+          <div class="tentang-naystem-bottom">
+            <div class="tentang-naystem-bottom-left">
+              <div class="image-top">
+                <img
+                  class="image-top2"
+                  src="assets/logo.png"
+                  alt=""
+                  data-aos="fade-up"
+                  data-aos-duration="1000"
+                  data-aos-delay="100"
+                />
+                <img
+                  class="image-top1"
+                  src="assets/tentang-kami-1.jpg"
+                  alt=""
+                  data-aos="fade-up"
+                  data-aos-duration="1000"
+                  data-aos-delay="200"
+                />
+              </div>
+              <div class="image-bottom">
+                <img
+                  src="assets/tentang-kami-2.jpg"
+                  alt=""
+                  data-aos="fade-up"
+                  data-aos-duration="1000"
+                  data-aos-delay="300"
+                />
+              </div>
+            </div>
+
+            <div class="tentang-naystem-bottom-right">
+              <p
+                data-aos="fade-left"
+                data-aos-duration="1000"
+                data-aos-delay="100"
+              >
+                Naystem adalah platform digital yang meningkatkan kesadaran
+                masyarakat tentang dampak sampah dan lingkungan. Melalui
+                Naystem, pengguna dapat mempelajari isu lingkungan serta melihat
+                kontribusi mereka melalui sistem pelacakan sampah. Platform ini
+                juga mendorong penerapan reduce, reuse, dan recycle untuk
+                menjaga keseimbangan alam.
+              </p>
+              <div class="manfaat-naystem">
+                <div
+                  data-aos="fade-left"
+                  data-aos-duration="1000"
+                  data-aos-delay="300"
+                >
+                  <h1>Meningkatkan kesadaran terhadap lingkungan.</h1>
+                </div>
+                <div
+                  data-aos="fade-left"
+                  data-aos-duration="1000"
+                  data-aos-delay="400"
+                >
+                  <h1>Mendorong gaya hidup ramah lingkungan.</h1>
+                </div>
+                <div
+                  data-aos="fade-left"
+                  data-aos-duration="1000"
+                  data-aos-delay="500"
+                >
+                  <h1>Membentuk pola pikir peduli lingkungan.</h1>
+                </div>
+              </div>
+              <div
+                data-aos="fade-left"
+                data-aos-duration="1000"
+                data-aos-delay="500"
+              >
+                <a href="visi-misi.html" class="link">Visi & Misi</a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="fitur-naystem">
+          <div class="section-title">
+            <h1 data-aos="fade-up" data-aos-duration="1000">
+              Alur <span>Naystem</span>
+            </h1>
+            <p data-aos="fade-up" data-aos-duration="1000" data-aos-delay="100">
+              Kenali bagaimana sistem ini membantu mencatat, menganalisis, dan
+              mengelola sampahmu.
+            </p>
+          </div>
+
+          <div
+            class="fitur-naystem-container"
+            data-aos="fade-up"
+            data-aos-duration="1000"
+            data-aos-delay="200"
+          >
+            <div class="img-center">
+              <img src="assets/logo.png" alt="" />
+            </div>
+            <div class="fitur-naystem-top">
+              <div class="top-left cardFitur">
+                <div class="top-left-title-1">
+                  <h2>Pencatatan</h2>
+                  <div
+                    class="garis"
+                    style="
+                      background-color: rgba(72, 161, 17, 0.3);
+                      height: 2px;
+                    "
+                  ></div>
+                </div>
+                <div class="top-left-title">
+                  <i class="bx bxs-pencil"></i>
+                  <h1>Catat Sampahmu</h1>
+                </div>
+                <p>
+                  Catat jumlah dan jenis sampah harianmu agar sistem bisa
+                  mengenali pola dan memberi analisis lebih akurat.
+                </p>
+
+                <a href="statistik.html" class="link">Mulai Mencatat</a>
+              </div>
+
+              <div class="top-right cardFitur">
+                <div class="top-right-title-1">
+                  <div
+                    class="garis"
+                    style="
+                      background-color: rgba(107, 176, 29, 0.3);
+                      height: 2px;
+                    "
+                  ></div>
+                  <h2>Analisis</h2>
+                </div>
+                <div class="top-right-title">
+                  <h1>Dampak & Solusi</h1>
+                  <i class="bx bxs-cloud-rain"></i>
+                </div>
+                <p>
+                  Ketahui dampak dari sampah yang kamu hasilkan terhadap
+                  lingkungan, serta temukan solusi untuk menguranginya.
+                </p>
+
+                <a href="statistik.html" class="link">Lihat Dampaknya</a>
+              </div>
+            </div>
+            <div class="fitur-naystem-bottom">
+              <div class="bottom-left cardFitur">
+                <div class="bottom-left-title-1">
+                  <h2>Pembelajaran</h2>
+                  <div
+                    class="garis"
+                    style="background-color: rgba(52, 126, 7, 0.3); height: 2px"
+                  ></div>
+                </div>
+                <div class="bottom-left-title">
+                  <i class="bx bxs-book-open"></i>
+                  <h1>Materi Sampah</h1>
+                </div>
+                <p>
+                  Pelajari informasi tentang jenis sampah, dampaknya, serta cara
+                  pengelolaannya melalui materi yang mudah dipahami.
+                </p>
+
+                <a href="pembelajaran.html" class="link">Pelajari Sekarang</a>
+              </div>
+
+              <div class="bottom-right cardFitur">
+                <div class="bottom-right-title-1">
+                  <div
+                    class="garis"
+                    style="
+                      background-color: rgba(131, 151, 5, 0.3);
+                      height: 2px;
+                    "
+                  ></div>
+                  <h2>Asisten</h2>
+                </div>
+                <div class="bottom-right-title">
+                  <h1>Naystem AI</h1>
+                  <i class="bx bxs-bot"></i>
+                </div>
+                <p>
+                  Ajukan pertanyaan seputar sampah dan lingkungan, lalu dapatkan
+                  jawaban dan saran yang bisa kamu terapkan sehari-hari.
+                </p>
+
+                <button id="showAIButtonSec">Mulai Bertanya</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+    <footer>
+      <img src="assets/wave-hero-secction.svg" alt="" class="wave-footer" />
+      <div class="footer-main">
+        <div class="footer-left">
+          <img src="assets/logo_lengkap.png" alt="" />
+          <p>
+            Langkah kecil hari ini dapat membawa perubahan besar untuk bumi esok
+            hari.
+          </p>
+
+          <div class="footer-sosmed">
+            <a><i class="bx bxl-youtube"></i></a>
+            <a><i class="bx bxl-instagram-alt"></i></a>
+            <a><i class="bx bxl-facebook-square"></i></a>
+          </div>
+        </div>
+        <div class="footer-right">
+          <div class="footer-right-link">
+            <h1>Halaman</h1>
+            <a href="#">Beranda</a>
+            <a class="link" href="visi-misi.html">Visi & Misi</a>
+            <a class="link" href="hubungi.html">Hubungi</a>
+            <a class="link" href="pembelajaran.html">Pembelajaran</a>
+            <a class="link" href="statistik.html">Statistik</a>
+          </div>
+
+          <div class="footer-right-link">
+            <h1>Pembelajaran</h1>
+            <a class="link" href="pengertian-sampah.html">Pengertian Sampah</a>
+            <a class="link" href="jenis-sampah.html">Jenis Sampah</a>
+            <a class="link" href="konsep-3r.html">Konsep 3R </a>
+            <a class="link" href="pengolahan-sampah-plastik.html"
+              >Pengolahan Sampah Plastik</a
+            >
+            <a class="link" href="sampah-yang-bisa-didaur-ulang.html"
+              >Sampah Daur Ulang</a
+            >
+            <a class="link" href="pencemaran-air.html">Pencemaran Air</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <p>Hak Cipta © 2026. Naystem. Semua hak dilindungi undang-undang.</p>
+      </div>
+    </footer>
+    <script src="js/script.js"></script>
+    <script src="js/ai.js"></script>
+  </body>
+</html>

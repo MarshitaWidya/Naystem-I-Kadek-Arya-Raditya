@@ -1,0 +1,245 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Naystem | Visi & Misi</title>
+    <link rel="icon" type="favicon" href="assets/logo.png" />
+
+    <!---------- Icon ---------->
+    <link
+      href="library/boxicons v2.1.4/css/boxicons.min.css"
+      rel="stylesheet"
+    />
+
+    <!-- Style CSS -->
+    <link rel="stylesheet" href="css/style.css" />
+
+    <!-- Animate on scroll -->
+    <link rel="stylesheet" href="library/animate_on_scroll/dist/aos.css" />
+    <script src="library/animate_on_scroll/dist/aos.js"></script>
+  </head>
+  <body>
+    <div class="transition">
+      <div class="cover cover1"></div>
+      <div class="cover cover2"></div>
+      <div class="cover cover3"></div>
+      <div class="cover cover4"></div>
+      <div class="cover cover5"></div>
+      <div class="cover cover6"></div>
+    </div>
+
+    <div class="page-green-overlay"></div>
+
+    <button id="showAI" class="showAI">
+      <i class="bx bxs-bot"></i>
+    </button>
+    <div class="ai-container" id="ai-container">
+      <div class="ai-container-main">
+        <div class="ai-container-top">
+          <h1>Naystem<span> AI</span></h1>
+        </div>
+
+        <div class="ai-container-midle" id="chat"></div>
+
+        <div class="ai-container-bottom">
+          <input
+            type="text"
+            id="userInput"
+            placeholder="Tanyakan sesuatu . . ."
+          />
+          <i class="bx bx-up-arrow-alt" onclick="sendQuestion()"></i>
+        </div>
+      </div>
+    </div>
+
+    <header>
+      <nav class="navbar">
+        <a href="home.html" class="link"
+          ><img src="assets/logo_lengkap.png" alt=""
+        /></a>
+        <div class="navbar-nav">
+          <a href="home.html" class="link">Beranda</a>
+          <a href="pembelajaran.html" class="link">Pembelajaran</a>
+          <a href="portofolio.html" class="link">Portofolio</a>
+          <a href="statistik.html" class="link">Statistik</a>
+          <a href="rekreasi.html" class="link">Rekreasi</a>
+          <a href="hubungi.html" class="link">Hubungi</a>
+        </div>
+
+        <div class="navbar-extra">
+          <a id="hamburger-menu"><i class="bx bx-menu"></i></a>
+        </div>
+      </nav>
+
+      <div class="hero-section-all visi-misi-hero-section">
+        <h1 data-aos="fade-up" data-aos-duration="1000" data-aos-delay="500">
+          Visi <span>dan</span> Misi
+        </h1>
+        <p data-aos="fade-up" data-aos-duration="1000" data-aos-delay="600">
+          Temukan visi dan misi Naystem sebagai arah dan tujuan kami dalam
+          menciptakan lingkungan yang lebih bersih dan berkelanjutan.
+        </p>
+
+        <img
+          src="assets/wave-hero-secction.svg"
+          alt=""
+          class="wave-hero-section"
+        />
+      </div>
+    </header>
+    <main>
+      <div class="particle">
+        <canvas id="particles"></canvas>
+        <div class="visi-misi">
+          <div class="visi">
+            <div class="visi-des">
+              <div
+                class="visi-des-top"
+                data-aos="fade-right"
+                data-aos-duration="1000"
+              >
+                <h1>Visi</h1>
+                <div class="garis"></div>
+              </div>
+
+              <p
+                data-aos="fade-right"
+                data-aos-duration="1000"
+                data-aos-delay="100"
+              >
+                Menjadi platform dimana masyarakat dapat belajar, memantau, dan
+                juga memahami pentingnya 3R, bukan hanya sekedar membuang sampah
+                pada tempatnya.
+              </p>
+            </div>
+            <div
+              class="visi-img"
+              data-aos="fade-left"
+              data-aos-duration="1000"
+              data-aos-delay="100"
+            >
+              <img src="assets/visi-img.png" alt="" />
+            </div>
+          </div>
+
+          <div class="misi">
+            <div
+              class="misi-img"
+              data-aos="fade-right"
+              data-aos-duration="1000"
+              data-aos-delay="400"
+            >
+              <input type="radio" name="card" id="card1" checked hidden />
+              <input type="radio" name="card" id="card2" hidden />
+              <input type="radio" name="card" id="card3" hidden />
+
+              <div class="wrapper">
+                <label for="card1">
+                  <div class="card-misi">
+                    <img src="assets/misi-1.jpg" alt="Gambar 1" />
+                  </div>
+                </label>
+                <label for="card2">
+                  <div class="card-misi">
+                    <img src="assets/misi-2.jpg" alt="Gambar 2" />
+                  </div>
+                </label>
+                <label for="card3">
+                  <div class="card-misi">
+                    <img src="assets/misi-3.jpg" alt="Gambar 3" />
+                  </div>
+                </label>
+              </div>
+            </div>
+            <div class="misi-des">
+              <div
+                class="misi-des-top"
+                data-aos="fade-left"
+                data-aos-duration="1000"
+              >
+                <div class="garis"></div>
+                <h1>Misi</h1>
+              </div>
+              <p
+                data-aos="fade-left"
+                data-aos-duration="1000"
+                data-aos-delay="100"
+              >
+                Menyediakan edukasi yang mudah dipahami tentang masalah
+                lingkungan dan pentingnya prinsip Reduce, Reuse, dan Recycle
+                (3R).
+              </p>
+              <p
+                data-aos="fade-left"
+                data-aos-duration="1000"
+                data-aos-delay="200"
+              >
+                Membantu masyarakat memantau kontribusi sampah mereka melalui
+                sistem tracking yang informatif dan transparan.
+              </p>
+              <p
+                data-aos="fade-left"
+                data-aos-duration="1000"
+                data-aos-delay="300"
+              >
+                Mendorong perubahan kebiasaan masyarakat agar lebih peduli
+                terhadap lingkungan melalui solusi dan rekomendasi yang praktis.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+    <footer>
+      <img src="assets/wave-hero-secction.svg" alt="" class="wave-footer" />
+      <div class="footer-main">
+        <div class="footer-left">
+          <img src="assets/logo_lengkap.png" alt="" />
+          <p>
+            Langkah kecil hari ini dapat membawa perubahan besar untuk bumi esok
+            hari.
+          </p>
+
+          <div class="footer-sosmed">
+            <a><i class="bx bxl-youtube"></i></a>
+            <a><i class="bx bxl-instagram-alt"></i></a>
+            <a><i class="bx bxl-facebook-square"></i></a>
+          </div>
+        </div>
+        <div class="footer-right">
+          <div class="footer-right-link">
+            <h1>Halaman</h1>
+            <a class="link" href="home.html">Beranda</a>
+            <a href="#">Visi & Misi</a>
+            <a class="link" href="hubungi.html">Hubungi</a>
+            <a class="link" href="pembelajaran.html">Pembelajaran</a>
+            <a class="link" href="statistik.html">Statistik</a>
+          </div>
+
+          <div class="footer-right-link">
+            <h1>Pembelajaran</h1>
+            <a class="link" href="pengertian-sampah.html">Pengertian Sampah</a>
+            <a class="link" href="jenis-sampah.html">Jenis Sampah</a>
+            <a class="link" href="konsep-3r.html">Konsep 3R </a>
+            <a class="link" href="pengolahan-sampah-plastik.html"
+              >Pengolahan Sampah Plastik</a
+            >
+            <a class="link" href="sampah-yang-bisa-didaur-ulang.html"
+              >Sampah Daur Ulang</a
+            >
+            <a class="link" href="pencemaran-air.html">Pencemaran Air</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <p>Hak Cipta © 2026. Naystem. Semua hak dilindungi undang-undang.</p>
+      </div>
+    </footer>
+
+    <!-- <script src="js/script.js"></script> -->
+    <script src="js/ai.js"></script>
+    <script src="js/visi-misi.js"></script>
+  </body>
+</html>
